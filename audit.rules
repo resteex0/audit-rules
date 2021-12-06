@@ -332,18 +332,6 @@
 -w /bin/nc.openbsd -p x -k susp_activity
 -w /bin/nc.traditional -p x -k susp_activity
 
-## Sbin suspicious activity
--w /sbin/iptables -p x -k sbin_susp
--w /sbin/ip6tables -p x -k sbin_susp
--w /sbin/ifconfig -p x -k sbin_susp
--w /usr/sbin/arptables -p x -k sbin_susp
--w /usr/sbin/ebtables -p x -k sbin_susp
--w /sbin/xtables-nft-multi -p x -k sbin_susp
--w /usr/sbin/nft -p x -k sbin_susp
--w /usr/sbin/tcpdump -p x -k sbin_susp
--w /usr/sbin/traceroute -p x -k sbin_susp
-#-w /usr/sbin/ufw -p x -k sbin_susp
-
 ## dbus-send invocation
 ### may indicate privilege escalation CVE-2021-3560
 -w /usr/bin/dbus-send -p x -k dbus_send
